@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260719-5" />
+    <link rel="stylesheet" href="styles.css?v=20260720-4" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -29,8 +29,9 @@
       </a>
       <nav class="topnav" aria-label="Navegación del documento">
         <a href="#resumen">Resumen</a>
-        <a href="#experiencia">Experiencia</a>
+        <a href="#contenido-rutina">Contenido</a>
         <a href="#interaccion">Interacción</a>
+        <a href="#ux">UI/UX</a>
         <a href="#sistema">Sistema</a>
         <a href="#pruebas">Pruebas</a>
       </nav>
@@ -86,7 +87,7 @@
           <dl class="project-facts">
             <div>
               <dt>Versión</dt>
-              <dd>0.2 · Julio de 2026</dd>
+              <dd>0.2 · Revisión 20/07/2026</dd>
             </div>
             <div>
               <dt>Plataforma</dt>
@@ -94,7 +95,7 @@
             </div>
             <div>
               <dt>Motor</dt>
-              <dd>Unity</dd>
+              <dd>Unity 2023.2.22f1</dd>
             </div>
             <div>
               <dt>Contexto</dt>
@@ -108,6 +109,26 @@
       </section>
 
       <div class="section-rule page-section" aria-hidden="true"></div>
+
+      <nav class="document-map page-section" aria-label="Índice completo del IDD">
+        <p><span>Índice</span> Documento integral</p>
+        <ol>
+          <li><a href="#resumen"><span>01</span>Resumen</a></li>
+          <li><a href="#experiencia"><span>02</span>Experiencia</a></li>
+          <li><a href="#flujo"><span>03</span>Core loop</a></li>
+          <li><a href="#contenido-rutina"><span>04</span>Contenido</a></li>
+          <li><a href="#alcance"><span>05</span>Alcance</a></li>
+          <li><a href="#interaccion"><span>06</span>Interacción</a></li>
+          <li><a href="#ux"><span>07</span>UI/UX</a></li>
+          <li><a href="#accesibilidad"><span>08</span>Accesibilidad</a></li>
+          <li><a href="#sistema"><span>09</span>Sistema</a></li>
+          <li><a href="#datos"><span>10</span>Datos</a></li>
+          <li><a href="#personas"><span>11</span>Personas</a></li>
+          <li><a href="#referentes"><span>12</span>Referentes</a></li>
+          <li><a href="#proyeccion"><span>13</span>Riesgos</a></li>
+          <li><a href="#pruebas"><span>14</span>Pruebas</a></li>
+        </ol>
+      </nav>
 
       <section class="overview page-section" id="resumen" aria-labelledby="resumen-titulo">
         <div class="section-intro">
@@ -153,10 +174,19 @@
           </svg>
           <p>
             <b>Estado del prototipo.</b> Prototipo funcional desarrollado para demostrar
-            navegación mediante gestos, calibración corporal, rutinas guiadas y retroalimentación
+            navegación mediante gestos, detección corporal automática, rutinas guiadas y retroalimentación
             visual mediante Kinect. La etapa actual se concentra en optimizar reconocimiento,
             tracking, claridad del feedback y pruebas con usuarios.
           </p>
+        </div>
+        <div class="success-criteria" aria-label="Criterios funcionales de la versión 0.2">
+          <p class="mini-label">Criterios funcionales v0.2</p>
+          <div>
+            <article><b>Entrada</b><span>El menú responde a mano o muñeca rastreada.</span></article>
+            <article><b>Selección</b><span>Un gesto horizontal confirmado activa una sola opción.</span></article>
+            <article><b>Postura</b><span>Solo completa cuando todas sus reglas coinciden de forma continua.</span></article>
+            <article><b>Rutina</b><span>Las tres posturas avanzan en orden y terminan en un resumen.</span></article>
+          </div>
         </div>
       </section>
 
@@ -201,7 +231,7 @@
         </div>
       </section>
 
-      <section class="loop-section page-section" aria-labelledby="loop-titulo">
+      <section class="loop-section page-section" id="flujo" aria-labelledby="loop-titulo">
         <div class="section-intro">
           <p class="section-number">03</p>
           <div>
@@ -211,7 +241,7 @@
         </div>
         <ol class="core-loop" aria-label="Secuencia principal de la experiencia">
           <li><span>01</span><b>Seleccionar<br />rutina</b></li>
-          <li><span>02</span><b>Calibrar<br />el cuerpo</b></li>
+          <li><span>02</span><b>Detectar<br />el cuerpo</b></li>
           <li><span>03</span><b>Observar la<br />postura guía</b></li>
           <li><span>04</span><b>Ejecutar el<br />movimiento</b></li>
           <li><span>05</span><b>Mantener la<br />postura</b></li>
@@ -227,7 +257,7 @@
           </article>
           <article>
             <p class="mini-label">Loop de la sesión</p>
-            <p>Ingresar <span>→</span> seleccionar rutina <span>→</span> calibrar <span>→</span> completar posturas <span>→</span> visualizar resultado <span>→</span> finalizar o elegir otra rutina.</p>
+            <p>Ingresar al menú <span>→</span> seleccionar Yoga <span>→</span> detección automática <span>→</span> completar posturas <span>→</span> visualizar resumen.</p>
           </article>
         </div>
         <p class="loop-footnote">
@@ -236,9 +266,86 @@
         </p>
       </section>
 
-      <section class="scope-section page-section" id="alcance" aria-labelledby="alcance-titulo">
+      <section class="content-section page-section" id="contenido-rutina" aria-labelledby="contenido-rutina-titulo">
         <div class="section-intro">
           <p class="section-number">04</p>
+          <div>
+            <p class="eyebrow">Contenido implementado</p>
+            <h2 id="contenido-rutina-titulo">Tres ejemplos de validación, una lógica ampliable.</h2>
+          </div>
+        </div>
+        <figure class="routine-visual">
+          <div class="routine-visual-media">
+            <img
+              src="Imagenes%20generales/rutina-tres-posturas.png"
+              width="2048"
+              height="683"
+              loading="lazy"
+              decoding="async"
+              alt="La misma practicante ilustra, de izquierda a derecha, las posturas Montaña, Guerrero II y Árbol."
+            />
+            <div class="routine-labels" aria-hidden="true">
+              <span>01 · Montaña</span><span>02 · Guerrero II</span><span>03 · Árbol</span>
+            </div>
+          </div>
+          <figcaption>
+            <div>
+              <span class="mini-label">Casos de validación en Yoga.unity</span>
+              <strong>Ejemplos de cómo el sistema comprueba una postura.</strong>
+              <p>Montaña, Guerrero II y Árbol muestran reglas angulares, posicionales y de sostén. En este build conforman la serie demostrativa; la estructura de validación permite configurar y añadir más posturas.</p>
+            </div>
+            <dl class="routine-kpis">
+              <div><dt>Ejemplos</dt><dd>3</dd></div>
+              <div><dt>Sostén mínimo</dt><dd>8 s</dd></div>
+              <div><dt>Evaluación</dt><dd>10 Hz</dd></div>
+              <div><dt>Puntos usados</dt><dd>16</dd></div>
+            </dl>
+          </figcaption>
+        </figure>
+
+        <div class="pose-grid">
+          <article class="pose-card">
+            <header><span>01</span><p>2 segundos continuos</p></header>
+            <h3>Montaña</h3>
+            <p class="pose-instruction">“Ponte de pie, espalda recta, brazos relajados y piernas extendidas.”</p>
+            <ul>
+              <li>Ambas piernas: cadera–rodilla–tobillo entre 165° y 180°.</li>
+              <li>Cabeza centrada sobre la cadera, tolerancia horizontal de 0,18 m.</li>
+            </ul>
+            <p class="pose-correction"><b>Corrige:</b> pierna izquierda, pierna derecha o centrado de cabeza. Los brazos se instruyen, pero no forman parte de las reglas activas.</p>
+          </article>
+          <article class="pose-card featured">
+            <header><span>02</span><p>3 segundos continuos</p></header>
+            <h3>Guerrero II</h3>
+            <p class="pose-instruction">“Abre las piernas y extiende ambos brazos a la altura de los hombros.”</p>
+            <ul>
+              <li>Ambos brazos: hombro–codo–muñeca entre 160° y 180°.</li>
+              <li>Rodilla izquierda entre 75° y 125°.</li>
+              <li>Ambas manos a la altura de los hombros, tolerancia de 0,18 m.</li>
+            </ul>
+            <p class="pose-correction"><b>Corrige:</b> extensión de brazos, flexión de rodilla y altura de cada mano.</p>
+          </article>
+          <article class="pose-card">
+            <header><span>03</span><p>3 segundos continuos</p></header>
+            <h3>Árbol</h3>
+            <p class="pose-instruction">“Equilíbrate sobre la pierna izquierda y apoya el pie derecho en la pierna.”</p>
+            <ul>
+              <li>Pierna izquierda de apoyo entre 160° y 180°.</li>
+              <li>Rodilla derecha entre 30° y 100°.</li>
+              <li>Tobillo derecho al menos 0,05 m sobre la rodilla izquierda.</li>
+            </ul>
+            <p class="pose-correction"><b>Corrige:</b> pierna de apoyo, flexión de rodilla derecha o altura del pie.</p>
+          </article>
+        </div>
+        <aside class="content-spec-note">
+          <span aria-hidden="true">±8°</span>
+          <p><b>Regla común.</b> Todos los criterios de una postura deben cumplirse a la vez. Los ángulos usan un margen global de ±8°; si una regla falla, el sostén vuelve a cero. El tiempo del resumen incluye el intento completo, no solo los segundos correctos.</p>
+        </aside>
+      </section>
+
+      <section class="scope-section page-section" id="alcance" aria-labelledby="alcance-titulo">
+        <div class="section-intro">
+          <p class="section-number">05</p>
           <div>
             <p class="eyebrow">Alcance</p>
             <h2 id="alcance-titulo">Definir el presente para construir con intención.</h2>
@@ -249,11 +356,11 @@
             <div class="scope-card-top"><span class="scope-symbol">✓</span><p>Implementado</p></div>
             <ul>
               <li>Menú principal</li>
-              <li>Navegación mediante gestos</li>
-              <li>Detección corporal con Kinect</li>
-              <li>Calibración del usuario</li>
-              <li>Presentación de rutinas y posturas</li>
-              <li>Interfaz principal y feedback visual básico</li>
+              <li>Navegación y selección mediante gestos</li>
+              <li>Detección automática del usuario más cercano</li>
+              <li>Serie de Montaña, Guerrero II y Árbol</li>
+              <li>Validación angular y posicional de cada postura</li>
+              <li>Correcciones, barra de progreso y resumen temporal</li>
             </ul>
           </article>
           <article class="scope-card progress">
@@ -261,10 +368,10 @@
             <ul>
               <li>Precisión de reconocimiento de posturas</li>
               <li>Estabilidad del tracking</li>
-              <li>Tiempo de selección mediante gesto</li>
-              <li>Mensajes de corrección y progreso</li>
+              <li>Ergonomía y falsos positivos del gesto</li>
+              <li>Jerarquía de mensajes de corrección</li>
               <li>Diseño definitivo de pantallas</li>
-              <li>Registro de resultados, si se implementa</li>
+              <li>Pausa, salida segura y regreso al menú</li>
             </ul>
           </article>
           <article class="scope-card outside">
@@ -276,6 +383,7 @@
               <li>Multijugador</li>
               <li>Plataforma comercial completa</li>
               <li>Módulos de bailoterapia</li>
+              <li>Historial persistente de resultados</li>
             </ul>
           </article>
         </div>
@@ -287,7 +395,7 @@
 
       <section class="interaction-section page-section" id="interaccion" aria-labelledby="interaccion-titulo">
         <div class="section-intro">
-          <p class="section-number">05</p>
+          <p class="section-number">06</p>
           <div>
             <p class="eyebrow">Mecánicas e interacción</p>
             <h2 id="interaccion-titulo">El movimiento activa la interfaz.</h2>
@@ -295,46 +403,111 @@
         </div>
         <div class="interaction-intro">
           <p>
-            El cuerpo es el input principal. El usuario selecciona opciones manteniendo la mano
-            sobre un objetivo, completa una calibración antes de iniciar y recibe señales visuales
-            que comunican avance, corrección o pérdida de tracking.
+            El cuerpo es el input principal. En el menú, la mano mueve el cursor y un desplazamiento
+            horizontal confirma la opción enfocada. En la rutina, el registro del usuario es
+            automático y las reglas corporales producen avance, correcciones o espera por tracking.
           </p>
           <div class="interaction-legend">
             <span><i class="legend-user"></i> Acción del usuario</span>
             <span><i class="legend-system"></i> Respuesta del sistema</span>
           </div>
         </div>
+        <figure class="context-visual">
+          <div class="context-visual-media">
+            <img
+              src="Imagenes%20generales/yoga-luz-natural.jpg"
+              width="1600"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              alt="Mujer realizando la postura del perro boca abajo sobre una esterilla en un espacio interior despejado e iluminado."
+            />
+            <span class="context-badge">Referencia visual · cuerpo en cuadro</span>
+            <span class="tracking-frame" aria-hidden="true"><i></i></span>
+          </div>
+          <figcaption>
+            <span class="mini-label">Contexto de uso propuesto</span>
+            <p>
+              <strong>Movimiento de cuerpo completo dentro del encuadre.</strong> La postura sirve
+              como referencia de contexto. El montaje operativo requiere iluminación uniforme,
+              cuerpo completo visible y un piso libre de obstáculos.
+            </p>
+            <small>Imagen de ambientación; no corresponde a una captura del prototipo.</small>
+            <a href="https://www.pexels.com/photo/woman-practicing-yoga-10223031/" target="_blank" rel="noreferrer">Foto: Ron Lach · Pexels</a>
+          </figcaption>
+        </figure>
         <div class="rules-table-wrap">
           <table class="rules-table">
-            <caption>Reglas a documentar con la configuración real del prototipo</caption>
+            <caption>Especificación de interacción v0.2 · valores activos del prototipo</caption>
             <thead>
               <tr>
                 <th scope="col">Mecánica</th>
-                <th scope="col">Qué debe quedar registrado</th>
-                <th scope="col">Estado de documentación</th>
+                <th scope="col">Regla implementada</th>
+                <th scope="col">Feedback visible</th>
+                <th scope="col">Recuperación o límite</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>Selección por gesto</td><td>Tiempo real de permanencia de la mano sobre una opción.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Calibración</td><td>Condiciones necesarias para iniciar y completarla.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Distancia</td><td>Rango recomendado frente al Kinect.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Reconocimiento corporal</td><td>Articulaciones analizadas y criterio real de postura.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Tiempo de permanencia</td><td>Tiempo requerido para mantener cada postura.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Corrección</td><td>Mensaje visual recibido ante una postura incompleta o incorrecta.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Pérdida de tracking</td><td>Respuesta, pausa y recuperación ante pérdida de detección.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
-              <tr><td>Progreso y finalización</td><td>Cálculo de avance y condición que completa la rutina.</td><td><span class="pending">Valor por validar durante las pruebas.</span></td></tr>
+              <tr>
+                <td>Navegación de menú</td>
+                <td>Mano derecha prioritaria; admite cualquiera y usa la muñeca como respaldo. Paso horizontal de 0,08 m o vertical de 0,025 m, confirmación en 0,02 s y cooldown de 0,16 s.</td>
+                <td>Cursor de 54 px, foco de opción y aro de progreso.</td>
+                <td>Sin navegación circular. El movimiento vertical tiene prioridad y el ancla neutra sigue la mano.</td>
+              </tr>
+              <tr>
+                <td>Confirmación de opción</td>
+                <td>Desplazamiento horizontal de 0,16 m, variación vertical máxima de 0,045 m y dominancia horizontal de 2,25:1. Cooldown de 1,1 s.</td>
+                <td>El aro llega al 100 % y se activa la opción enfocada.</td>
+                <td>La permanencia de 1,25 s existe como alternativa, pero está inactiva mientras el gesto horizontal esté habilitado.</td>
+              </tr>
+              <tr>
+                <td>Detección y calibración</td>
+                <td>Registro automático de un usuario: el esqueleto más cercano, sin pose de calibración obligatoria.</td>
+                <td>“Esperando al sensor Kinect…” o “Colócate frente al Kinect…”.</td>
+                <td>Se recalibra automáticamente cuando vuelve a detectar un cuerpo válido.</td>
+              </tr>
+              <tr>
+                <td>Distancia y montaje</td>
+                <td>Mínimo de lectura configurado en 1,0 m; sin máximo de software. Sensor a 1,0 m de altura e inclinación de 0°.</td>
+                <td>El sistema pasa de espera a detección cuando registra al usuario.</td>
+                <td>No hay mensajes específicos de “muy cerca” o “muy lejos”; el cuerpo completo debe permanecer en el campo del sensor.</td>
+              </tr>
+              <tr>
+                <td>Reconocimiento corporal</td>
+                <td>Evalúa cada 0,1 s. Todas las reglas angulares y posicionales de la postura deben aprobar; margen angular global de ±8°.</td>
+                <td>Porcentaje de coincidencia y hasta tres correcciones específicas.</td>
+                <td>Una articulación no visible hace fallar su regla e identifica el punto que el sensor no puede ver.</td>
+              </tr>
+              <tr>
+                <td>Sostén de postura</td>
+                <td>Montaña 2 s; Guerrero II 3 s; Árbol 3 s, siempre de manera continua.</td>
+                <td>Barra de sostén, tiempo transcurrido y “Muy bien. Mantén la pose…”.</td>
+                <td>Cualquier regla incorrecta reinicia inmediatamente el contador de esa postura a cero.</td>
+              </tr>
+              <tr>
+                <td>Pérdida de tracking</td>
+                <td>Gracia de 0,65 s para la mano y 0,8 s para el cuerpo antes de liberar el seguimiento.</td>
+                <td>“No hay mano rastreada” en menú o instrucción para colocarse frente al Kinect en rutina.</td>
+                <td>Después de la gracia se reinician ancla, gesto, puntuación y sostén; la recuperación es automática.</td>
+              </tr>
+              <tr>
+                <td>Progreso y cierre</td>
+                <td>Coincidencia = reglas aprobadas / reglas totales. Al completar una postura avanza automáticamente; la serie termina tras las tres.</td>
+                <td>Barra al 100 %, etiqueta “RESUMEN” y tiempos por postura más tiempo total durante 1 s.</td>
+                <td>El tiempo resume el intento completo. No hay persistencia ni regreso automático al menú en los scripts revisados.</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <aside class="honesty-note">
-          <span aria-hidden="true">!</span>
-          <p><b>Precisión antes que suposición.</b> Los tiempos, tolerancias y umbrales se incorporan únicamente al verificarse en la programación del prototipo.</p>
+        <aside class="honesty-note source-note">
+          <span aria-hidden="true">✓</span>
+          <p><b>Fuente de configuración.</b> Valores auditados directamente en <code>Menu.unity</code>, <code>Yoga.unity</code>, <code>HandMenuSelector.cs</code> y <code>YogaPoseValidator.cs</code>. Describen el build actual; los resultados de usabilidad se registran por separado.</p>
         </aside>
       </section>
 
       <section class="ux-section page-section" id="ux" aria-labelledby="ux-titulo">
         <div class="section-intro">
-          <p class="section-number">06</p>
+          <p class="section-number">07</p>
           <div>
             <p class="eyebrow">UI/UX</p>
             <h2 id="ux-titulo">Una interfaz que se entiende desde la distancia.</h2>
@@ -356,36 +529,36 @@
             </div>
           </div>
           <div class="screen-list">
-            <p class="mini-label">Pantallas contempladas</p>
+            <p class="mini-label">Inventario del build</p>
             <ol>
-              <li><span>01</span> Menú principal</li>
-              <li><span>02</span> Selección de serie</li>
-              <li><span>03</span> Rutina</li>
-              <li><span>04</span> Calibración</li>
-              <li><span>05</span> Créditos</li>
+              <li><span>01</span> Menú · escena activa</li>
+              <li><span>02</span> Selección de serie · recurso UI</li>
+              <li><span>03</span> Rutina · escena activa</li>
+              <li><span>04</span> Detección · estado de la rutina</li>
+              <li><span>05</span> Resumen · overlay temporal</li>
             </ol>
-            <p class="small-copy">Las pantallas de bienvenida, preparación o resultado se integran al inventario al confirmarse en el prototipo.</p>
+            <p class="small-copy"><code>Menu.unity</code> y <code>Yoga.unity</code> son las únicas escenas incluidas en el build. Calibración y resumen son estados, no escenas independientes.</p>
           </div>
         </div>
         <div class="flow-card">
           <p class="mini-label">Flujo principal</p>
           <div class="ui-flow" aria-label="Flujo principal de pantallas">
-            <span>Inicio</span><i>→</i><span>Menú</span><i>→</i><span>Calibración</span><i>→</i><span>Selección</span><i>→</i><span>Preparación</span><i>→</i><span>Posturas</span><i>→</i><span>Resultado</span><i>→</i><span>Menú</span>
+            <span>Menú</span><i>→</i><span>Gesto de selección</span><i>→</i><span>Yoga</span><i>→</i><span>Detección automática</span><i>→</i><span>Montaña</span><i>→</i><span>Guerrero II</span><i>→</i><span>Árbol</span><i>→</i><span>Resumen</span>
           </div>
           <div class="error-routes">
-            <p><b>Calibración fallida</b> <span>→</span> reposicionamiento <span>→</span> nueva calibración</p>
-            <p><b>Tracking perdido</b> <span>→</span> pausa <span>→</span> recuperación de detección <span>→</span> continuación <em>(flujo por optimizar)</em></p>
+            <p><b>Sin cuerpo detectado</b> <span>→</span> mensaje de espera <span>→</span> reposicionamiento <span>→</span> registro automático</p>
+            <p><b>Tracking perdido</b> <span>→</span> gracia de 0,8 s <span>→</span> reinicio de sostén <span>→</span> nueva detección</p>
           </div>
         </div>
         <div class="state-block">
           <p class="mini-label">Estados de interfaz</p>
           <div class="states">
-            <span>No detectado</span><span>Detectado</span><span>Demasiado cerca</span><span>Demasiado lejos</span>
-            <span>Fuera del encuadre</span><span>Calibrando</span><span>Calibración completada</span><span>Mano sobre una opción</span><span>Selección en progreso</span>
-            <span>Selección confirmada</span><span>Postura en ejecución</span><span>Postura correcta</span><span>Postura incorrecta</span>
-            <span>Tracking perdido</span><span>Rutina completada</span>
+            <span>Sensor en espera</span><span>Cuerpo no detectado</span><span>Usuario detectado</span>
+            <span>Mano rastreada</span><span>Sin mano rastreada</span><span>Opción enfocada</span>
+            <span>Gesto confirmado</span><span>Postura incorrecta</span><span>Postura correcta</span>
+            <span>Sostén en progreso</span><span>Postura completada</span><span>Resumen de rutina</span>
           </div>
-          <p class="small-copy">Implementados: por confirmar desde el prototipo. En optimización: calibración, selección, corrección y tracking. Recomendados para una siguiente iteración: los demás estados del inventario.</p>
+          <p class="small-copy">Estos estados provienen de los mensajes y ramas activas de los scripts. “Demasiado cerca” y “demasiado lejos” no se presentan como estados porque el build no muestra esos mensajes.</p>
         </div>
         <div class="evidence-card">
           <div class="evidence-icon" aria-hidden="true">
@@ -403,7 +576,7 @@
 
       <section class="accessibility-section page-section" id="accesibilidad" aria-labelledby="accesibilidad-titulo">
         <div class="section-intro">
-          <p class="section-number">07</p>
+          <p class="section-number">08</p>
           <div>
             <p class="eyebrow">Accesibilidad y cuidado</p>
             <h2 id="accesibilidad-titulo">Diseñada para orientar, no para apresurar.</h2>
@@ -423,7 +596,7 @@
           <article>
             <span class="access-icon" aria-hidden="true">Ⅱ</span>
             <h3>Ritmo controlable</h3>
-            <p>La interfaz debe permitir tiempo suficiente para actuar y repetición de instrucciones cuando sea necesario. La pausa se incorporará solo si se confirma en el prototipo.</p>
+            <p>Las posturas esperan al usuario y reinician el sostén al corregir. El build aún no ofrece pausa; se registra como requisito de seguridad de la siguiente iteración.</p>
           </article>
           <article>
             <span class="access-icon" aria-hidden="true">↝</span>
@@ -441,7 +614,7 @@
 
       <section class="system-section page-section" id="sistema" aria-labelledby="sistema-titulo">
         <div class="section-intro">
-          <p class="section-number">08</p>
+          <p class="section-number">09</p>
           <div>
             <p class="eyebrow">Sistema técnico</p>
             <h2 id="sistema-titulo">Del movimiento a una respuesta visible.</h2>
@@ -456,37 +629,101 @@
           <i>→</i>
           <div><span>04</span><b>Interfaz</b><small>Feedback visual</small></div>
         </div>
+        <div class="system-visual-grid">
+          <figure class="setup-visual">
+            <div class="setup-stage">
+              <img
+                src="Imagenes%20generales/guia_configuracion_kinect_sin_fondo.png"
+                width="1506"
+                height="727"
+                loading="lazy"
+                decoding="async"
+                alt="Guía de configuración con pantalla y Kinect a un metro de altura, campo de visión y usuario situado al menos a un metro."
+              />
+            </div>
+            <figcaption>
+              <span class="mini-label">Montaje documentado</span>
+              <strong>Sensor nivelado y cuerpo completo visible.</strong>
+              <p>La escena configura altura de 1,0 m, inclinación de 0° y distancia mínima de 1,0 m. No fija un máximo: el límite práctico es el campo de visión y el alcance real del Kinect.</p>
+            </figcaption>
+          </figure>
+          <figure class="tracking-visual">
+            <div class="tracking-visual-media">
+              <img
+                src="Imagenes%20generales/kinect-skeleton-view.jpg"
+                width="1280"
+                height="799"
+                loading="lazy"
+                decoding="async"
+                alt="Captura de Kinect Explorer con una persona, su esqueleto superpuesto y una vista de profundidad lateral."
+              />
+              <span>Referencia técnica · Kinect v1</span>
+            </div>
+            <figcaption>
+              <div>
+                <span class="mini-label">Lectura corporal</span>
+                <strong>Color, profundidad y articulaciones.</strong>
+                <p>Referencia del tipo de esqueleto que entrega Kinect. No es una captura de Kinect Yoga Experience.</p>
+              </div>
+              <small>
+                <a href="https://commons.wikimedia.org/wiki/File:Kinect_Skeleton_View.jpg" target="_blank" rel="noreferrer">Sang1938 · Wikimedia Commons</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer license">CC BY-SA 3.0</a>
+              </small>
+            </figcaption>
+          </figure>
+        </div>
         <div class="technical-grid">
           <article>
             <p class="mini-label">Base confirmada</p>
+            <figure class="hardware-visual">
+              <img
+                src="Imagenes%20generales/kinect-360-sensor.png"
+                width="960"
+                height="401"
+                loading="lazy"
+                decoding="async"
+                alt="Sensor Kinect negro para Xbox 360 visto de frente."
+              />
+              <figcaption>
+                <span>Sensor principal</span>
+                <strong>Kinect para Xbox 360</strong>
+                <small class="hardware-credit">
+                  <a href="https://commons.wikimedia.org/wiki/File:KinectSensor.png" target="_blank" rel="noreferrer">James Pfaff / Alphathon · Wikimedia Commons</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer license">CC BY-SA 3.0 · imagen redimensionada</a>
+                </small>
+              </figcaption>
+            </figure>
             <dl>
-              <div><dt>Motor</dt><dd>Unity</dd></div>
+              <div><dt>Motor</dt><dd>Unity 2023.2.22f1</dd></div>
               <div><dt>Sensor</dt><dd>Kinect para Xbox 360</dd></div>
               <div><dt>Plataforma</dt><dd>PC con Windows</dd></div>
-              <div><dt>Flujo</dt><dd>Calibración, detección y feedback</dd></div>
+              <div><dt>Escenas de build</dt><dd>Menu.unity → Yoga.unity</dd></div>
             </dl>
           </article>
           <article>
-            <p class="mini-label">Ficha técnica por validar</p>
+            <p class="mini-label">Stack y límites verificados</p>
             <dl>
-              <div><dt>Versión de Unity y Kinect SDK</dt><dd>Versión pendiente de confirmar.</dd></div>
-              <div><dt>Integración</dt><dd>Plugin o asset pendiente de confirmar.</dd></div>
-              <div><dt>Reconocimiento</dt><dd>Método pendiente de confirmar.</dd></div>
-              <div><dt>Resolución y PC</dt><dd>Requisitos pendientes de confirmar.</dd></div>
-              <div><dt>Dependencias</dt><dd>Versión pendiente de confirmar.</dd></div>
-              <div><dt>Limitaciones</dt><dd>Por validar: luz, distancia y tracking.</dd></div>
+              <div><dt>Integración Kinect</dt><dd>Scripts Kinect v1 incluidos localmente en <code>Assets/KinectSDK</code>.</dd></div>
+              <div><dt>Reconocimiento</dt><dd>Reglas configurables de ángulos y posición sobre el esqueleto; evaluación a 10 Hz.</dd></div>
+              <div><dt>Entrada de menú</dt><dd><code>HandMenuSelector</code>, mano o muñeca, con suavizado y selección horizontal.</dd></div>
+              <div><dt>Interfaz</dt><dd>UGUI 2.0.0 y recursos importados mediante Unity Figma Bridge.</dd></div>
+              <div><dt>Render</dt><dd>Universal Render Pipeline 16.0.6.</dd></div>
+              <div><dt>Limitaciones actuales</dt><dd>Sin máximo de distancia, pausa, regreso al menú ni almacenamiento persistente de resultados.</dd></div>
             </dl>
           </article>
         </div>
         <p class="technical-note">
-          Las versiones, dependencias, requisitos y umbrales deben documentarse desde la
-          configuración real del proyecto antes de la presentación final.
+          <b>Requisito de despliegue.</b> PC Windows compatible con Kinect para Xbox 360 y sus
+          controladores. El repositorio no fija CPU, RAM, GPU ni resolución mínima; se documenta
+          esa ausencia en lugar de inventar especificaciones de hardware.
         </p>
       </section>
 
       <section class="data-section page-section" id="datos" aria-labelledby="datos-titulo">
         <div class="section-intro">
-          <p class="section-number">09</p>
+          <p class="section-number">10</p>
           <div>
             <p class="eyebrow">Datos y analítica</p>
             <h2 id="datos-titulo">Medir para mejorar la experiencia.</h2>
@@ -494,13 +731,19 @@
         </div>
         <div class="data-grid">
           <article>
-            <p class="mini-label">Datos registrados por el sistema</p>
-            <p class="small-copy">No se han podido verificar registros automáticos desde los archivos disponibles. Los datos se incluirán aquí únicamente cuando la implementación de Unity los guarde de forma comprobable.</p>
+            <p class="mini-label">Datos de sesión en memoria</p>
+            <ul class="check-list">
+              <li>Posiciones de articulaciones entregadas por Kinect</li>
+              <li>Reglas aprobadas y porcentaje de coincidencia</li>
+              <li>Tiempo de intento y sostén de cada postura</li>
+              <li>Índice de postura, feedback y estado de tracking</li>
+            </ul>
+            <p class="small-copy">Los scripts revisados usan estos valores durante la sesión y muestran un resumen por 1 s. No se encontró escritura a archivo, base de datos o servicio externo.</p>
           </article>
           <article>
             <p class="mini-label">Datos recogidos en pruebas</p>
             <ul class="check-list">
-              <li>Tiempo de calibración y tiempo total</li>
+              <li>Tiempo hasta detección y tiempo total</li>
               <li>Errores de selección y solicitudes de ayuda</li>
               <li>Posturas reconocidas y pérdidas de tracking</li>
               <li>Claridad de instrucciones, facilidad de uso y utilidad del feedback</li>
@@ -513,15 +756,16 @@
           <span aria-hidden="true">⌁</span>
           <p>
             <b>Privacidad.</b> El prototipo procesa información corporal para detectar posiciones y
-            movimientos. No se almacenarán imágenes, grabaciones ni datos personales
-            identificables de participantes, salvo autorización expresa.
+            movimientos en tiempo real. El build revisado no implementa almacenamiento persistente
+            de imágenes, grabaciones ni resultados. Cualquier registro futuro para investigación
+            debe incorporar consentimiento, propósito y tiempo de conservación explícitos.
           </p>
         </aside>
       </section>
 
       <section class="people-section page-section" id="personas" aria-labelledby="personas-titulo">
         <div class="section-intro">
-          <p class="section-number">10</p>
+          <p class="section-number">11</p>
           <div>
             <p class="eyebrow">Público y personas</p>
             <h2 id="personas-titulo">Autonomía para quienes empiezan.</h2>
@@ -538,6 +782,24 @@
             de forma autónoma.
           </p>
         </div>
+        <figure class="audience-visual">
+          <div class="audience-visual-media">
+            <img
+              src="Imagenes%20generales/yoga-equilibrio-estudio.jpg"
+              width="1400"
+              height="933"
+              loading="lazy"
+              decoding="async"
+              alt="Mujer concentrada practicando una postura de equilibrio en un estudio de yoga."
+            />
+          </div>
+          <figcaption>
+            <span class="mini-label">Contexto humano</span>
+            <strong>Una experiencia individual, legible y sin presión competitiva.</strong>
+            <p>La imagen representa el ambiente y la concentración buscados; no corresponde a una sesión de prueba ni a una captura del prototipo.</p>
+            <a href="https://www.pexels.com/photo/woman-in-yoga-tree-pose-8436415/" target="_blank" rel="noreferrer">Foto: Yan Krukau · Pexels</a>
+          </figcaption>
+        </figure>
         <div class="persona-grid">
           <article class="persona-card">
             <div class="persona-top"><span>BP 01</span><p>Joven universitaria</p></div>
@@ -573,7 +835,7 @@
 
       <section class="references-section page-section" id="referentes" aria-labelledby="referentes-titulo">
         <div class="section-intro">
-          <p class="section-number">11</p>
+          <p class="section-number">12</p>
           <div>
             <p class="eyebrow">Referentes funcionales</p>
             <h2 id="referentes-titulo">Aprender de formatos conocidos, con una respuesta corporal.</h2>
@@ -614,10 +876,10 @@
 
       <section class="limits-section page-section" id="proyeccion" aria-labelledby="proyeccion-titulo">
         <div class="section-intro">
-          <p class="section-number">12</p>
+          <p class="section-number">13</p>
           <div>
-            <p class="eyebrow">Límites y proyección</p>
-            <h2 id="proyeccion-titulo">Una base enfocada antes de expandirse.</h2>
+            <p class="eyebrow">Riesgos, límites y proyección</p>
+            <h2 id="proyeccion-titulo">Lo que falta también queda documentado.</h2>
           </div>
         </div>
         <div class="limits-grid">
@@ -625,7 +887,7 @@
             <p class="mini-label">Multijugador</p>
             <p>
               No aplica en la versión actual. La experiencia se plantea como individual para
-              validar primero reconocimiento corporal, calibración, claridad de interfaz y
+              optimizar primero reconocimiento corporal, detección, claridad de interfaz y
               retroalimentación visual.
             </p>
           </article>
@@ -641,10 +903,19 @@
             <p class="mini-label">Expansión futura</p>
             <p>
               La arquitectura del sistema podría adaptarse posteriormente a módulos de movilidad,
-              estiramiento o bailoterapia, después de validar el funcionamiento del módulo
+              estiramiento o bailoterapia, después de comprobar el funcionamiento del módulo
               principal de yoga.
             </p>
           </article>
+        </div>
+        <div class="risk-register" aria-label="Registro de riesgos de la versión 0.2">
+          <p class="mini-label">Registro de riesgos del build</p>
+          <div>
+            <article><span class="risk-level high">Alta</span><h3>Sin pausa ni salida segura</h3><p>La rutina no ofrece pausa ni retorno al menú. Próxima acción: controles visibles de pausar, salir y confirmar abandono.</p></article>
+            <article><span class="risk-level high">Alta</span><h3>Oclusión o pérdida corporal</h3><p>Una articulación no visible bloquea la regla y reinicia el sostén. Próxima acción: guía de encuadre antes de comenzar.</p></article>
+            <article><span class="risk-level medium">Media</span><h3>Sin distancia máxima</h3><p>El build solo fija 1,0 m como mínimo. Próxima acción: configurar máximo y mensajes específicos de cerca/lejos.</p></article>
+            <article><span class="risk-level medium">Media</span><h3>Resumen visible 1 segundo</h3><p>El resultado desaparece demasiado rápido para leerlo con calma. Próxima acción: mantenerlo hasta una confirmación del usuario.</p></article>
+          </div>
         </div>
         <p class="scope-conclusion">
           <b>Límites del prototipo.</b> La versión actual está orientada a demostrar la viabilidad
@@ -656,19 +927,19 @@
 
       <section class="testing-section page-section" id="pruebas" aria-labelledby="pruebas-titulo">
         <div class="section-intro">
-          <p class="section-number">13</p>
+          <p class="section-number">14</p>
           <div>
             <p class="eyebrow">Plan de pruebas</p>
-            <h2 id="pruebas-titulo">Validar con personas, iterar con evidencia.</h2>
+            <h2 id="pruebas-titulo">Comprobar con criterios concretos.</h2>
           </div>
         </div>
         <div class="testing-overview">
           <article class="testing-objective">
             <p class="mini-label">Objetivo</p>
             <p>
-              Evaluar si los usuarios pueden comprender la interfaz, completar la calibración,
-              seleccionar una rutina mediante gestos, ejecutar las posturas y finalizar la
-              experiencia sin asistencia constante.
+              Evaluar si los usuarios pueden comprender el menú, seleccionar Yoga mediante gesto,
+              ser detectados automáticamente, completar las tres posturas y leer el resumen sin
+              asistencia constante.
             </p>
           </article>
           <article class="participants-card">
@@ -677,24 +948,37 @@
             <p>Personas del público objetivo, con distintos niveles de experiencia en yoga y uso de tecnología interactiva.</p>
           </article>
         </div>
+        <div class="acceptance-block">
+          <div class="acceptance-heading">
+            <p class="mini-label">Umbrales de aceptación</p>
+            <p><b>Estado:</b> criterios definidos; resultados de sesiones aún no registrados.</p>
+          </div>
+          <div class="acceptance-grid">
+            <article><span>≥ 80 %</span><p>completa menú y rutina sin intervención del facilitador.</p></article>
+            <article><span>≤ 1 error</span><p>de selección accidental por participante en la tarea de menú.</p></article>
+            <article><span>≥ 80 %</span><p>interpreta correctamente al menos una corrección corporal.</p></article>
+            <article><span>100 %</span><p>recibe un estado visible al perder y recuperar el tracking.</p></article>
+          </div>
+        </div>
         <div class="testing-grid">
           <article>
             <p class="mini-label">Tareas de la sesión</p>
             <ol class="task-list">
               <li>Iniciar la aplicación.</li>
-              <li>Colocarse frente al Kinect.</li>
-              <li>Completar la calibración.</li>
-              <li>Seleccionar una rutina mediante gesto.</li>
+              <li>Mover el cursor con una mano o muñeca.</li>
+              <li>Enfocar Yoga y confirmar con gesto horizontal.</li>
+              <li>Colocarse frente al Kinect para la detección automática.</li>
               <li>Ejecutar las posturas indicadas.</li>
               <li>Interpretar una corrección.</li>
+              <li>Recuperarse de una pérdida breve de tracking.</li>
               <li>Completar la rutina.</li>
-              <li>Regresar al menú principal.</li>
+              <li>Leer el resumen final.</li>
             </ol>
           </article>
           <article>
             <p class="mini-label">Métricas</p>
             <div class="metric-list">
-              <span>Tiempo de calibración</span><span>Errores de selección</span><span>Posturas reconocidas</span>
+              <span>Tiempo hasta detección</span><span>Errores de selección</span><span>Posturas reconocidas</span>
               <span>Pérdidas de tracking</span><span>Solicitudes de ayuda</span><span>Tiempo total</span>
               <span>Tasa de finalización</span><span>Claridad de instrucciones</span><span>Utilidad del feedback</span><span>Satisfacción general</span>
             </div>
@@ -719,9 +1003,9 @@
           </p>
         </div>
         <p class="expected-result">
-          <b>Resultado esperado.</b> Identificar problemas de seguimiento corporal, comprensión de
-          instrucciones, selección por gestos y claridad del feedback para realizar ajustes antes
-          de presentar la versión final.
+          <b>Entregable de cada sesión.</b> Registro de build, participante anonimizado, resultado
+          por tarea, tiempos, incidencias, severidad, observaciones y decisión de diseño derivada.
+          Hasta que esa ficha exista, los umbrales anteriores son objetivos y no resultados obtenidos.
         </p>
       </section>
     </main>
@@ -733,7 +1017,7 @@
         </span>
         <span>Kinect Yoga Experience</span>
       </div>
-      <p>Interactive Design Document · Versión 0.2 · Julio de 2026</p>
+      <p>Interactive Design Document · v0.2 · Revisión documental 20 de julio de 2026</p>
     </footer>
   </body>
 </html>
