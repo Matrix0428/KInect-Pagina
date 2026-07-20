@@ -2831,3 +2831,312 @@ body::before {
   .overview-facts > div { padding: .62rem .68rem; }
   .scope-card { padding: 1.05rem; }
 }
+
+/* Final legibility system. Important declarations intentionally neutralize legacy theme rules. */
+:where(
+  .project-card,
+  .overview-facts,
+  .prototype-band,
+  .experience-pillars article,
+  .core-loop li,
+  .loop-details article,
+  .scope-card,
+  .scope-conclusion,
+  .interaction-legend,
+  .rules-table-wrap,
+  .comparison-table-wrap,
+  .honesty-note,
+  .ux-principles,
+  .screen-list,
+  .flow-card,
+  .state-block,
+  .evidence-card,
+  .accessibility-grid article,
+  .future-accessibility,
+  .architecture > div,
+  .technical-grid article,
+  .data-grid article,
+  .privacy-card,
+  .audience-callout p,
+  .persona-card,
+  .limits-grid article,
+  .testing-objective,
+  .participants-card,
+  .testing-grid article,
+  .testing-phases,
+  .testing-schedule,
+  .expected-result
+) {
+  color: var(--home-ink-soft) !important;
+  background: linear-gradient(180deg, #fffaf2 0%, #f1e9de 100%) !important;
+  border: 1px solid rgba(125, 90, 37, .18) !important;
+  box-shadow: 0 16px 34px rgba(22, 15, 10, .16) !important;
+}
+
+:where(
+  .project-card,
+  .overview-facts,
+  .prototype-band,
+  .experience-pillars article,
+  .core-loop li,
+  .loop-details article,
+  .scope-card,
+  .scope-conclusion,
+  .interaction-legend,
+  .rules-table-wrap,
+  .comparison-table-wrap,
+  .honesty-note,
+  .ux-principles,
+  .screen-list,
+  .flow-card,
+  .state-block,
+  .evidence-card,
+  .accessibility-grid article,
+  .future-accessibility,
+  .architecture > div,
+  .technical-grid article,
+  .data-grid article,
+  .privacy-card,
+  .audience-callout p,
+  .persona-card,
+  .limits-grid article,
+  .testing-objective,
+  .participants-card,
+  .testing-grid article,
+  .testing-phases,
+  .testing-schedule,
+  .expected-result
+) :where(h3, h4, b, strong, summary) {
+  color: #3d3329 !important;
+  opacity: 1 !important;
+}
+
+:where(
+  .project-card,
+  .overview-facts,
+  .prototype-band,
+  .experience-pillars article,
+  .core-loop li,
+  .loop-details article,
+  .scope-card,
+  .scope-conclusion,
+  .interaction-legend,
+  .rules-table-wrap,
+  .comparison-table-wrap,
+  .honesty-note,
+  .ux-principles,
+  .screen-list,
+  .flow-card,
+  .state-block,
+  .evidence-card,
+  .accessibility-grid article,
+  .future-accessibility,
+  .architecture > div,
+  .technical-grid article,
+  .data-grid article,
+  .privacy-card,
+  .audience-callout p,
+  .persona-card,
+  .limits-grid article,
+  .testing-objective,
+  .participants-card,
+  .testing-grid article,
+  .testing-phases,
+  .testing-schedule,
+  .expected-result
+) :where(p, li, dd, small, em) {
+  color: #62574c !important;
+  opacity: 1 !important;
+}
+
+:where(
+  .project-card,
+  .overview-facts,
+  .prototype-band,
+  .experience-pillars article,
+  .core-loop li,
+  .loop-details article,
+  .scope-card,
+  .scope-conclusion,
+  .interaction-legend,
+  .rules-table-wrap,
+  .comparison-table-wrap,
+  .honesty-note,
+  .ux-principles,
+  .screen-list,
+  .flow-card,
+  .state-block,
+  .evidence-card,
+  .accessibility-grid article,
+  .future-accessibility,
+  .architecture > div,
+  .technical-grid article,
+  .data-grid article,
+  .privacy-card,
+  .audience-callout p,
+  .persona-card,
+  .limits-grid article,
+  .testing-objective,
+  .participants-card,
+  .testing-grid article,
+  .testing-phases,
+  .testing-schedule,
+  .expected-result
+) :where(.mini-label, dt, caption, .status-line, .pillar-number, .participant-number) {
+  color: #74521f !important;
+  opacity: 1 !important;
+}
+
+.ux-layout,
+.testing-overview { align-items: start; }
+
+.ux-principles,
+.screen-list { min-height: 0; padding: 1.25rem; }
+.ux-principles h3 { margin-bottom: .65rem; font-size: clamp(1.6rem, 3vw, 2rem); }
+.ux-principles > p:not(.mini-label) { margin-bottom: 1rem; color: #62574c !important; font-size: .82rem; }
+.ux-principles .mini-label { color: #74521f !important; }
+.swatches span { color: #3d3329 !important; }
+.swatches span::before { border-color: rgba(61, 51, 41, .24); }
+
+.interaction-legend span { color: #4d4237 !important; }
+.rules-table-wrap caption,
+.comparison-table-wrap caption { color: #74521f !important; }
+.rules-table th,
+.comparison-table th { color: #3d3329 !important; background: #eadfce !important; }
+.rules-table td,
+.comparison-table td,
+.comparison-table tbody th { color: #62574c !important; }
+.rules-table td:first-child { color: #3d3329 !important; }
+.pending { color: #68421d !important; background: #ead7bd !important; }
+
+.ui-flow span,
+.states span,
+.metric-list span {
+  color: #523d20 !important;
+  background: #eadfce !important;
+  border-color: rgba(125, 90, 37, .2) !important;
+}
+.error-routes b { color: #874a3b !important; }
+.small-copy { color: #62574c !important; opacity: 1; }
+
+.scope-conclusion { color: #4d4237 !important; font-size: 1rem; }
+.technical-note,
+.loop-footnote,
+.stakeholders {
+  color: rgba(255, 250, 242, .76) !important;
+}
+.technical-note b,
+.loop-footnote b,
+.stakeholders b { color: #efd39d !important; }
+.difference-key { color: #efd39d !important; }
+
+.testing-phases { min-height: 0; padding: 1.15rem 1.2rem; }
+.testing-phases > .mini-label { margin-bottom: .85rem; color: #74521f !important; }
+.testing-phases ol { gap: .9rem; }
+.testing-phases li { min-width: 0; padding-top: 2rem; }
+.testing-phases li:not(:last-child)::after { top: .65rem; background: rgba(116, 82, 31, .3); }
+.testing-phases span {
+  top: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: #3d2a10 !important;
+  font-size: .48rem;
+  background: #d6b25f;
+  box-shadow: 0 0 0 4px rgba(214, 178, 95, .14);
+}
+.testing-phases b { color: #3d3329 !important; font-size: .74rem; }
+.testing-phases small { color: #62574c !important; font-size: .65rem; }
+
+/* Calm motion system: entrance, hover and status cues. */
+@keyframes headerArrive {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroArrive {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes softReveal {
+  from { transform: translateY(12px); }
+  to { transform: translateY(0); }
+}
+@keyframes statusBreathe {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(162, 189, 100, .14); }
+  50% { box-shadow: 0 0 0 7px rgba(162, 189, 100, .05); }
+}
+
+.topbar { animation: headerArrive .65s ease-out both; }
+.hero-copy { animation: heroArrive .75s .08s ease-out both; }
+.hero-visual { animation: heroArrive .9s .14s ease-out both; }
+.project-card { animation: heroArrive .75s .22s ease-out both; }
+.status-dot { animation: statusBreathe 3.2s ease-in-out infinite; }
+
+@supports (animation-timeline: view()) {
+  .section-intro,
+  .overview-content,
+  .prototype-band,
+  .experience-grid,
+  .core-loop,
+  .loop-details,
+  .scope-grid,
+  .interaction-intro,
+  .rules-table-wrap,
+  .ux-layout,
+  .flow-card,
+  .state-block,
+  .accessibility-grid,
+  .architecture,
+  .technical-grid,
+  .data-grid,
+  .persona-grid,
+  .comparison-table-wrap,
+  .limits-grid,
+  .testing-overview,
+  .testing-grid,
+  .testing-phases {
+    animation: softReveal .7s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 24%;
+  }
+}
+
+@media (hover: hover) {
+  :where(
+    .experience-pillars article,
+    .scope-card,
+    .accessibility-grid article,
+    .data-grid article,
+    .persona-card,
+    .limits-grid article,
+    .testing-grid article,
+    .ux-principles,
+    .screen-list
+  ) {
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  }
+
+  :where(
+    .experience-pillars article,
+    .scope-card,
+    .accessibility-grid article,
+    .data-grid article,
+    .persona-card,
+    .limits-grid article,
+    .testing-grid article,
+    .ux-principles,
+    .screen-list
+  ):hover {
+    transform: translateY(-3px);
+    border-color: rgba(181, 108, 82, .34) !important;
+    box-shadow: 0 21px 38px rgba(22, 15, 10, .2) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
