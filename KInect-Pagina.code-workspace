@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../Downloads/Pagina-proyecto-kinnec-main/Pagina-proyecto-kinnec-main"
 		}
 	],
 	"settings": {
