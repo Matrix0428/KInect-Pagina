@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260719-5" />
+    <link rel="stylesheet" href="styles.css?v=20260726-visual" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -31,6 +31,8 @@
         <a href="#resumen">Resumen</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#interaccion">Interacción</a>
+        <a href="#desarrollo-visual">Visual</a>
+        <a href="#ux">UI/UX</a>
         <a href="#sistema">Sistema</a>
         <a href="#pruebas">Pruebas</a>
       </nav>
@@ -332,9 +334,112 @@
         </aside>
       </section>
 
-      <section class="ux-section page-section" id="ux" aria-labelledby="ux-titulo">
+      <section class="visual-development-section page-section" id="desarrollo-visual" aria-labelledby="desarrollo-visual-titulo">
         <div class="section-intro">
           <p class="section-number">06</p>
+          <div>
+            <p class="eyebrow">Desarrollo visual del prototipo</p>
+            <h2 id="desarrollo-visual-titulo">Del diseño del entorno a su integración en la experiencia.</h2>
+          </div>
+        </div>
+        <p class="visual-development-lead">
+          El desarrollo visual de Kinect Yoga Experience busca construir un entorno tranquilo y
+          funcional para la práctica guiada de yoga. El escenario y los personajes fueron
+          desarrollados para mantener una experiencia clara y coherente, acompañando la postura y
+          la interacción sin generar distracciones.
+        </p>
+
+        <div class="visual-block">
+          <div class="visual-block-copy">
+            <p class="mini-label">Línea gráfica</p>
+            <h3>Bienestar y tecnología en una misma composición.</h3>
+            <p>
+              La línea gráfica combina bienestar y tecnología mediante formas suaves, textos
+              legibles y elementos visuales pensados para observarse a distancia. La interfaz
+              mantiene una apariencia tranquila, mientras los indicadores de seguimiento corporal
+              comunican las respuestas del sistema.
+            </p>
+          </div>
+          <figure class="prototype-figure style-board" aria-label="Referentes visuales, paleta y componentes principales">
+            <div class="style-board-content">
+              <div class="style-board-copy">
+                <span>Identidad visual</span>
+                <strong>Kinect Yoga Experience</strong>
+                <p>Calma, claridad, postura guía y respuesta corporal visible.</p>
+              </div>
+              <div class="palette-strip" aria-label="Paleta principal">
+                <i style="--tone:#140f0c"></i>
+                <i style="--tone:#d6b25f"></i>
+                <i style="--tone:#fffaf2"></i>
+                <i style="--tone:#6f8267"></i>
+                <i style="--tone:#b56c52"></i>
+              </div>
+              <div class="component-samples" aria-label="Componentes principales">
+                <span>Menú</span>
+                <span>Tracking estable</span>
+                <span>Postura guía</span>
+              </div>
+            </div>
+            <figcaption>Figura 1. Referentes, paleta y elementos gráficos utilizados en el prototipo.</figcaption>
+          </figure>
+        </div>
+
+        <div class="visual-block">
+          <div class="visual-block-copy">
+            <p class="mini-label">Escenario, modelos y texturas</p>
+            <h3>Un espacio despejado para practicar sin distracciones.</h3>
+            <p>
+              El escenario fue desarrollado como un espacio tranquilo y despejado para facilitar la
+              ejecución de las posturas. Los modelos, materiales y texturas se trabajaron procurando
+              mantener la claridad visual y evitar elementos que distraigan al usuario durante la rutina.
+            </p>
+            <p class="decision-note">
+              <b>Decisión de diseño.</b> Se priorizó un entorno sencillo y ordenado para mantener la
+              atención sobre la postura y reducir distracciones durante la rutina.
+            </p>
+          </div>
+          <div class="visual-gallery">
+            <figure class="prototype-figure">
+              <img src="05_interfaz_ui_mejorada/01_escenario_blender_mejorado.png" alt="Escenario de práctica desarrollado en Blender con una zona central despejada, paneles de madera, ventana y elementos ambientales." loading="lazy" />
+              <figcaption>Figura 2. Desarrollo del escenario y distribución de sus elementos en Blender.</figcaption>
+            </figure>
+            <figure class="prototype-figure model-figure">
+              <div class="model-pair" aria-label="Modelos principales utilizados como personajes guía">
+                <img src="05_interfaz_ui_mejorada/03_personaje_masculino_mejorado.png" alt="Personaje masculino utilizado como referencia visual para las posturas." loading="lazy" />
+                <img src="05_interfaz_ui_mejorada/04_personaje_femenino_mejorado.png" alt="Personaje femenino utilizado como referencia visual para las posturas." loading="lazy" />
+              </div>
+              <figcaption>Figura 3. Personajes guía utilizados como referencias visuales para las posturas.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="visual-block">
+          <div class="visual-block-copy">
+            <p class="mini-label">Integración visual</p>
+            <h3>El entorno se ajusta a la cámara, la escala y la interfaz.</h3>
+            <p>
+              Los recursos visuales fueron integrados en Unity y ajustados según la posición de la
+              cámara, la escala del escenario y la visibilidad de la interfaz. Esta integración permite
+              presentar la postura guía, el seguimiento corporal y los mensajes del sistema dentro de
+              una composición clara.
+            </p>
+            <p class="decision-note">
+              <b>Decisión de integración.</b> Se buscó conservar la identidad visual del escenario y
+              adaptarlo al espacio donde se presentan la postura guía y los elementos de interacción.
+            </p>
+          </div>
+          <div class="visual-gallery">
+            <figure class="prototype-figure">
+              <img src="05_interfaz_ui_mejorada/02_escenario_unity_mejorado.png" alt="Escenario integrado en Unity con iluminación, materiales y composición ajustados para el prototipo." loading="lazy" />
+              <figcaption>Figura 4. Resultado del escenario integrado dentro de Unity.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="ux-section page-section" id="ux" aria-labelledby="ux-titulo">
+        <div class="section-intro">
+          <p class="section-number">07</p>
           <div>
             <p class="eyebrow">UI/UX</p>
             <h2 id="ux-titulo">Una interfaz que se entiende desde la distancia.</h2>
@@ -394,16 +499,35 @@
           <div>
             <p class="mini-label">Evidencia visual</p>
             <p>
-              Las capturas reales de cada pantalla se incorporan durante las pruebas. Esta versión
-              del documento no sustituye evidencia del prototipo con imágenes conceptuales.
+              Las capturas de interfaz se mantienen dentro de UI/UX para explicar el recorrido de
+              uso sin mezclarlas con el desarrollo del entorno 3D.
             </p>
           </div>
+        </div>
+        <div class="screen-design-block">
+          <div class="screen-design-copy">
+            <p class="mini-label">Diseño de pantallas</p>
+            <h3>Pantallas principales del recorrido.</h3>
+            <p>
+              Las pantallas mantienen una estructura visual consistente durante las diferentes
+              etapas de la experiencia. La información utiliza elementos claros y visibles para
+              facilitar su lectura mientras el usuario interactúa frente al Kinect.
+            </p>
+            <p class="decision-note">
+              <b>Decisión de diseño.</b> Se priorizaron mensajes breves y componentes de gran tamaño
+              debido a la distancia entre el usuario y la pantalla durante la actividad.
+            </p>
+          </div>
+          <figure class="prototype-figure screen-figure">
+            <img src="05_interfaz_ui_mejorada/05_interfaz_ui_mejorada.png" alt="Lámina con las principales pantallas diseñadas para el prototipo: menú principal, series de yoga, calibración corporal y rutina." loading="lazy" />
+            <figcaption>Figura 5. Diseño de las principales pantallas de Kinect Yoga Experience.</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="accessibility-section page-section" id="accesibilidad" aria-labelledby="accesibilidad-titulo">
         <div class="section-intro">
-          <p class="section-number">07</p>
+          <p class="section-number">08</p>
           <div>
             <p class="eyebrow">Accesibilidad y cuidado</p>
             <h2 id="accesibilidad-titulo">Diseñada para orientar, no para apresurar.</h2>
@@ -441,7 +565,7 @@
 
       <section class="system-section page-section" id="sistema" aria-labelledby="sistema-titulo">
         <div class="section-intro">
-          <p class="section-number">08</p>
+          <p class="section-number">09</p>
           <div>
             <p class="eyebrow">Sistema técnico</p>
             <h2 id="sistema-titulo">Del movimiento a una respuesta visible.</h2>
@@ -486,7 +610,7 @@
 
       <section class="data-section page-section" id="datos" aria-labelledby="datos-titulo">
         <div class="section-intro">
-          <p class="section-number">09</p>
+          <p class="section-number">10</p>
           <div>
             <p class="eyebrow">Datos y analítica</p>
             <h2 id="datos-titulo">Medir para mejorar la experiencia.</h2>
@@ -521,7 +645,7 @@
 
       <section class="people-section page-section" id="personas" aria-labelledby="personas-titulo">
         <div class="section-intro">
-          <p class="section-number">10</p>
+          <p class="section-number">11</p>
           <div>
             <p class="eyebrow">Público y personas</p>
             <h2 id="personas-titulo">Autonomía para quienes empiezan.</h2>
@@ -573,7 +697,7 @@
 
       <section class="references-section page-section" id="referentes" aria-labelledby="referentes-titulo">
         <div class="section-intro">
-          <p class="section-number">11</p>
+          <p class="section-number">12</p>
           <div>
             <p class="eyebrow">Referentes funcionales</p>
             <h2 id="referentes-titulo">Aprender de formatos conocidos, con una respuesta corporal.</h2>
@@ -614,7 +738,7 @@
 
       <section class="limits-section page-section" id="proyeccion" aria-labelledby="proyeccion-titulo">
         <div class="section-intro">
-          <p class="section-number">12</p>
+          <p class="section-number">13</p>
           <div>
             <p class="eyebrow">Límites y proyección</p>
             <h2 id="proyeccion-titulo">Una base enfocada antes de expandirse.</h2>
@@ -656,7 +780,7 @@
 
       <section class="testing-section page-section" id="pruebas" aria-labelledby="pruebas-titulo">
         <div class="section-intro">
-          <p class="section-number">13</p>
+          <p class="section-number">14</p>
           <div>
             <p class="eyebrow">Plan de pruebas</p>
             <h2 id="pruebas-titulo">Validar con personas, iterar con evidencia.</h2>

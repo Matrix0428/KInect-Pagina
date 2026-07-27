@@ -659,6 +659,7 @@ ol {
 .loop-section,
 .scope-section,
 .interaction-section,
+.visual-development-section,
 .ux-section,
 .accessibility-section,
 .system-section,
@@ -2205,10 +2206,13 @@ tbody tr:last-child th {
   .experience-grid,
   .scope-grid,
   .interaction-intro,
+  .visual-development-lead,
+  .visual-block,
   .ux-layout,
   .flow-card,
   .state-block,
   .evidence-card,
+  .screen-design-block,
   .accessibility-grid,
   .architecture,
   .technical-grid,
@@ -2229,7 +2233,9 @@ tbody tr:last-child th {
 
   .overview-content,
   .experience-grid,
+  .visual-block,
   .ux-layout,
+  .screen-design-block,
   .technical-grid,
   .data-grid,
   .audience-callout,
@@ -3047,6 +3053,272 @@ body::before {
 .testing-phases b { color: #3d3329 !important; font-size: .74rem; }
 .testing-phases small { color: #62574c !important; font-size: .65rem; }
 
+/* Visual development evidence. */
+.visual-development-section {
+  padding-top: 1rem;
+}
+
+.visual-development-lead {
+  max-width: 840px;
+  margin: -1.1rem 0 2.25rem 74px;
+  color: rgba(255, 250, 242, .74);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.visual-block {
+  display: grid;
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: start;
+  margin-left: 74px;
+}
+
+.visual-block + .visual-block {
+  margin-top: 2.45rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid rgba(214, 178, 95, .16);
+}
+
+.visual-block-copy {
+  min-width: 0;
+}
+
+.visual-block-copy h3 {
+  max-width: 445px;
+  margin: 0 0 .8rem;
+  color: var(--home-cream);
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  line-height: 1.05;
+}
+
+.visual-block-copy p:not(.mini-label),
+.visual-development-section .decision-note {
+  color: rgba(255, 250, 242, .72);
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.decision-note {
+  margin: 1rem 0 0;
+  padding-left: .85rem;
+  border-left: 2px solid var(--home-saffron);
+}
+
+.decision-note b {
+  color: #efd39d;
+}
+
+.visual-gallery {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.prototype-figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #62574c;
+  background: linear-gradient(180deg, #fffaf2 0%, #f1e9de 100%);
+  border: 1px solid rgba(125, 90, 37, .18);
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(22, 15, 10, .16);
+}
+
+.prototype-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #211a15;
+}
+
+.visual-gallery > .prototype-figure > img,
+.screen-figure img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.prototype-figure figcaption {
+  margin: 0;
+  padding: .78rem .95rem .88rem;
+  color: #62574c;
+  font-size: .72rem;
+  font-weight: 600;
+  line-height: 1.45;
+  background: linear-gradient(180deg, #fffaf2 0%, #f1e9de 100%);
+  border-top: 1px solid rgba(125, 90, 37, .14);
+}
+
+.style-board {
+  background: linear-gradient(135deg, #211914 0%, #38281c 100%);
+}
+
+.style-board-content {
+  display: grid;
+  gap: 1rem;
+  min-height: 260px;
+  padding: 1.15rem;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 242, .05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 250, 242, .05) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.style-board-copy {
+  max-width: 440px;
+}
+
+.style-board-copy span {
+  display: block;
+  margin-bottom: .42rem;
+  color: var(--home-saffron);
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.style-board-copy strong {
+  display: block;
+  color: var(--home-cream);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: .95;
+}
+
+.style-board-copy p {
+  max-width: 390px;
+  margin: .65rem 0 0;
+  color: rgba(255, 250, 242, .7);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.palette-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .45rem;
+  align-self: end;
+}
+
+.palette-strip i {
+  display: block;
+  min-height: 58px;
+  background: var(--tone);
+  border: 1px solid rgba(255, 250, 242, .16);
+  border-radius: 10px;
+}
+
+.component-samples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.component-samples span {
+  padding: .46rem .65rem;
+  color: #3d2a10;
+  font-size: .68rem;
+  font-weight: 800;
+  background: #eadfce;
+  border: 1px solid rgba(214, 178, 95, .28);
+  border-radius: 999px;
+}
+
+.model-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  padding: .75rem;
+  background: #eee8ed;
+}
+
+.model-pair img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+}
+
+.screen-design-block {
+  display: grid;
+  grid-template-columns: minmax(250px, .56fr) minmax(0, 1.44fr);
+  gap: 1rem;
+  align-items: start;
+  margin: 2rem 0 0 74px;
+}
+
+.screen-design-copy {
+  min-width: 0;
+  padding: 1.25rem;
+  color: #62574c;
+  background: linear-gradient(180deg, #fffaf2 0%, #f1e9de 100%);
+  border: 1px solid rgba(125, 90, 37, .18);
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(22, 15, 10, .16);
+}
+
+.screen-design-copy h3 {
+  margin: 0 0 .65rem;
+  color: #3d3329;
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  line-height: 1.05;
+}
+
+.screen-design-copy p:not(.mini-label) {
+  color: #62574c;
+  font-size: .82rem;
+  line-height: 1.58;
+}
+
+.screen-design-copy .decision-note {
+  color: #62574c;
+  border-color: var(--home-saffron);
+}
+
+.screen-design-copy .decision-note b {
+  color: #3d3329;
+}
+
+.state-block {
+  padding: 1.25rem;
+}
+
+@media (max-width: 980px) {
+  .visual-block,
+  .screen-design-block {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-block-copy h3 {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 760px) {
+  .visual-development-lead,
+  .visual-block,
+  .screen-design-block {
+    margin-left: 0;
+  }
+
+  .style-board-content {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 430px) {
+  .model-pair,
+  .palette-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .palette-strip i {
+    min-height: 38px;
+  }
+}
+
 /* Calm motion system: entrance, hover and status cues. */
 @keyframes headerArrive {
   from { opacity: 0; transform: translateY(-12px); }
@@ -3081,9 +3353,12 @@ body::before {
   .scope-grid,
   .interaction-intro,
   .rules-table-wrap,
+  .visual-development-lead,
+  .visual-block,
   .ux-layout,
   .flow-card,
   .state-block,
+  .screen-design-block,
   .accessibility-grid,
   .architecture,
   .technical-grid,
@@ -3110,7 +3385,9 @@ body::before {
     .limits-grid article,
     .testing-grid article,
     .ux-principles,
-    .screen-list
+    .screen-list,
+    .prototype-figure,
+    .screen-design-copy
   ) {
     transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
   }
@@ -3124,7 +3401,9 @@ body::before {
     .limits-grid article,
     .testing-grid article,
     .ux-principles,
-    .screen-list
+    .screen-list,
+    .prototype-figure,
+    .screen-design-copy
   ):hover {
     transform: translateY(-3px);
     border-color: rgba(181, 108, 82, .34) !important;
