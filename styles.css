@@ -21,7 +21,6 @@
   font-synthesis: none;
 }
 
-/* Visual system adapted from Pagina-proyecto-kinnec-main. */
 :root {
   --ink: #f2f2f2;
   --ink-soft: rgba(242, 242, 242, 0.72);
@@ -2194,7 +2193,6 @@ tbody tr:last-child th {
   }
 }
 
-/* Final cascade: preserve the reference page's dark technical presentation. */
 body { background: #03080c !important; font-family: "Barlow Semi Condensed", sans-serif !important; }
 body::before { position: fixed; inset: 0; z-index: -1; content: ""; background-image: linear-gradient(rgba(0,243,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(0,243,255,.045) 1px, transparent 1px), radial-gradient(circle at 50% 15%, rgba(161,0,255,.11), transparent 30rem); background-size: 40px 40px, 40px 40px, auto; }
 .topbar { width: min(calc(100% - 1.6rem), 1400px); margin: 1rem auto 0; color: var(--ink); background: rgba(3,8,12,.88); border: 1px solid var(--pine); box-shadow: inset 0 0 18px rgba(0,243,255,.08), 0 18px 35px rgba(0,0,0,.5); }
@@ -2225,7 +2223,6 @@ body::before { position: fixed; inset: 0; z-index: -1; content: ""; background-i
 .footer { color: var(--ink-soft); background: #020507; border-top: 1px solid var(--pine); }
 @media (max-width: 760px) { .topbar { width: 100%; margin-top: 0; border-inline: 0; } .hero { min-height: auto; } }
 
-/* Home-page visual language from Pagina-proyecto-kinnec-main/index.html. */
 :root {
   --home-saffron: #d6b25f;
   --home-saffron-strong: #bf9340;
@@ -2289,7 +2286,6 @@ body::before {
 .team-line > span { color: var(--home-saffron); }
 .team-line p, .role-copy { color: rgba(255,250,242,.68); font-size: .72rem; }
 
-/* Central meditation visual with softly floating chakra symbols. */
 .hero-visual {
   top: 3rem;
   right: 2.5%;
@@ -2312,7 +2308,6 @@ body::before {
 .chakra-sacral { bottom: 13%; left: 9%; animation-delay: -4.6s; }
 .chakra-root { top: 42%; left: 0; animation-delay: -5.2s; }
 
-/* Cream surfaces always carry dark, legible text. */
 .project-card, .prototype-band, .honesty-note, .privacy-card, .evidence-card, .experience-pillars article, .scope-card, .accessibility-grid article, .data-grid article, .persona-card, .limits-grid article, .testing-objective, .participants-card, .testing-grid article, .testing-schedule, .expected-result, .flow-card, .state-block, .ux-principles, .screen-list, .loop-details article, .overview-facts div, .technical-grid dl div, .persona-card dl div {
   color: var(--home-ink);
   background: linear-gradient(180deg, rgba(255,250,242,.96), rgba(243,235,225,.9));
@@ -2363,7 +2358,6 @@ body::before {
   .meditation-figure, .chakra { animation: none; }
 }
 
-/* Contrast and density pass: every cream surface uses one predictable text system. */
 .overview-content { align-items: start; }
 
 .overview-facts {
@@ -2565,7 +2559,6 @@ body::before {
   .scope-card { padding: 1.05rem; }
 }
 
-/* Final legibility system. Important declarations intentionally neutralize legacy theme rules. */
 :where(
   .project-card,
   .overview-facts,
@@ -2780,7 +2773,6 @@ body::before {
 .testing-phases b { color: #3d3329 !important; font-size: .74rem; }
 .testing-phases small { color: #62574c !important; font-size: .65rem; }
 
-/* Visual development evidence. */
 .visual-development-section {
   padding-top: 1rem;
 }
@@ -3055,7 +3047,6 @@ body::before {
   }
 }
 
-/* Editorial imagery: two deliberate visual pauses in the document. */
 .context-visual {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(250px, .72fr);
@@ -3339,7 +3330,6 @@ body::before {
   }
 }
 
-/* IDD v0.2 content audit: navigation, playable content and evidence visuals. */
 .document-map {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -3699,7 +3689,6 @@ body::before {
   .acceptance-block { break-inside: avoid; box-shadow: none; }
 }
 
-/* Ajustes de acabado: conserva la identidad cálida y el sistema visual existente. */
 body {
   overflow-x: clip;
   background: linear-gradient(180deg, #1b1511 0%, #17110e 52%, #110d0b 100%) !important;
@@ -3710,7 +3699,6 @@ body::before,
   display: none;
 }
 
-/* Variaciones sutiles por zona para separar el documento sin agregar ornamentos. */
 main > section.page-section:not(.hero) {
   position: relative;
   isolation: isolate;
@@ -3753,7 +3741,6 @@ main > section.page-section:not(.hero)::before {
   display: none;
 }
 
-/* El halo recorre la ventana y acompaña el desplazamiento sin interceptar acciones. */
 .firefly-light {
   position: fixed;
   top: 0;
@@ -3816,7 +3803,6 @@ main > section.page-section:not(.hero)::before {
   50% { opacity: 1; }
 }
 
-/* Movimiento perceptible, pero pausado, para la composición de chakras. */
 .meditation-figure {
   animation: none !important;
 }
@@ -3845,7 +3831,6 @@ main > section.page-section:not(.hero)::before {
   }
 }
 
-/* Pequeños retoques sin cambiar la composición ni la paleta. */
 .hero-visual {
   background: radial-gradient(circle, rgba(111, 130, 103, .2), rgba(181, 108, 82, .055) 52%, transparent 70%);
   border: 0;
