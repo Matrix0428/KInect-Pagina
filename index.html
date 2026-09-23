@@ -7,24 +7,19 @@
       name="description"
       content="Interactive Design Document de Kinect Yoga Experience: experiencia de yoga guiado con interacción corporal mediante Kinect."
     />
-    <meta name="theme-color" content="#164a47" />
+    <meta name="theme-color" content="#201813" />
     <title>Kinect Yoga Experience — IDD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260726-visual" />
+    <link rel="stylesheet" href="styles.css?v=20260923-contrast" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="firefly-light" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="#portada" aria-label="Kinect Yoga Experience, volver al inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" role="img">
-            <circle cx="16" cy="6.5" r="3.4"></circle>
-            <path d="M16 11.5v8.2M8.5 16l7.5 3.7 7.5-3.7M11.4 27l4.6-7.3L20.6 27"></path>
-          </svg>
-        </span>
         <span>Kinect Yoga <b>Experience</b></span>
       </a>
       <nav class="topnav" aria-label="Navegación del documento">
@@ -42,12 +37,11 @@
     <main id="contenido">
       <section class="hero page-section" id="portada" aria-labelledby="titulo-principal">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Interactive Design Document · IDD</p>
+          <p class="eyebrow">Documento de diseño interactivo · 2026</p>
           <h1 id="titulo-principal">Kinect <i>Yoga</i><br />Experience</h1>
           <p class="hero-lead">
-            Interactive Design Document — IDD de Kinect Yoga Experience, orientado a documentar
-            la experiencia del usuario, interacción corporal, interfaz, sistema técnico y proceso
-            de validación del prototipo.
+            Prototipo para PC que usa Kinect 360 para reconocer posturas de yoga, guiar una rutina
+            breve y mostrar correcciones en tiempo real.
           </p>
           <div class="hero-tags" aria-label="Características principales">
             <span>Exergame</span>
@@ -56,19 +50,11 @@
           </div>
           <div class="team-line">
             <span>Equipo</span>
-            <p>Matías Alexander Cabrera Navas · Listher Gabriel Vera Vera</p>
+            <p>Matías Alexander Cabrera Navas · Listher Gabriel Vera Vera · Tatiana Alexandra Cabrera Silva</p>
           </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="visual-note note-top">Guía visual</div>
-          <div class="visual-note note-bottom">Cuerpo como interfaz</div>
-          <div class="aura aura-one"></div>
-          <div class="aura aura-two"></div>
-          <div class="sensor-panel">
-            <span class="sensor-light"></span>
-            <span>KINECT</span>
-          </div>
           <div class="chakra-orbit">
             <img class="meditation-figure" src="imagenes%20chakra/figura_meditativa_sin_simbolos_sin_fondo.png" alt="" />
             <img class="chakra chakra-crown" src="imagenes%20chakra/chakra_corona_morado.png" alt="" />
@@ -79,12 +65,11 @@
             <img class="chakra chakra-sacral" src="imagenes%20chakra/chakra_sacro_naranja.png" alt="" />
             <img class="chakra chakra-root" src="imagenes%20chakra/chakra_raiz_rojo.png" alt="" />
           </div>
-          <div class="ground-line"></div>
         </div>
 
         <aside class="project-card" aria-label="Ficha del proyecto">
-          <div class="status-line"><span class="status-dot"></span> Estado actual</div>
-          <p class="status-copy">Prototipo funcional en fase de optimización y pruebas.</p>
+          <div class="status-line">Estado del proyecto</div>
+          <p class="status-copy">Prototipo funcional; reconocimiento y usabilidad en ajuste.</p>
           <dl class="project-facts">
             <div>
               <dt>Versión</dt>
@@ -137,7 +122,7 @@
           <p class="section-number">01</p>
           <div>
             <p class="eyebrow">Visión del proyecto</p>
-            <h2 id="resumen-titulo">Una práctica guiada, disponible cuando se necesita.</h2>
+            <h2 id="resumen-titulo">Yoga guiado con respuesta en tiempo real</h2>
           </div>
         </div>
         <div class="overview-content">
@@ -149,7 +134,6 @@
               responde a la ejecución del usuario; y frente a una clase programada, permite
               realizar rutinas breves con mayor autonomía y disponibilidad.
             </p>
-            <blockquote>Más interactivo que un video y más flexible que una clase programada.</blockquote>
           </div>
           <dl class="overview-facts">
             <div>
@@ -171,9 +155,6 @@
           </dl>
         </div>
         <div class="prototype-band">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v18M3 12h18"></path>
-          </svg>
           <p>
             <b>Estado del prototipo.</b> Prototipo funcional desarrollado para demostrar
             navegación mediante gestos, detección corporal automática, rutinas guiadas y retroalimentación
@@ -197,7 +178,7 @@
           <p class="section-number">02</p>
           <div>
             <p class="eyebrow">Core Experience</p>
-            <h2 id="experiencia-titulo">Calma para avanzar con confianza.</h2>
+            <h2 id="experiencia-titulo">Objetivo de la experiencia</h2>
           </div>
         </div>
         <div class="experience-grid">
@@ -216,18 +197,18 @@
           <div class="experience-pillars">
             <article>
               <span class="pillar-number">01</span>
-              <h3>Sentir</h3>
-              <p>Calma y concentración desde el primer contacto.</p>
+              <h3>Contexto</h3>
+              <p>Una rutina individual, breve y sin presión competitiva.</p>
             </article>
             <article>
               <span class="pillar-number">02</span>
-              <h3>Actuar</h3>
-              <p>Posturas básicas, equilibrio y ubicación frente al sensor.</p>
+              <h3>Acción</h3>
+              <p>Seguir la postura guía y ajustar el cuerpo frente al sensor.</p>
             </article>
             <article>
               <span class="pillar-number">03</span>
-              <h3>Avanzar</h3>
-              <p>Confirmación visual, progreso de rutina y sensación de logro.</p>
+              <h3>Respuesta</h3>
+              <p>Correcciones visibles, progreso de sostén y confirmación.</p>
             </article>
           </div>
         </div>
@@ -237,20 +218,16 @@
         <div class="section-intro">
           <p class="section-number">03</p>
           <div>
-            <p class="eyebrow">Core Loop</p>
-            <h2 id="loop-titulo">Una secuencia simple, repetible y medible.</h2>
+            <p class="eyebrow">Flujo</p>
+            <h2 id="loop-titulo">Flujo de una sesión</h2>
           </div>
         </div>
         <ol class="core-loop" aria-label="Secuencia principal de la experiencia">
-          <li><span>01</span><b>Seleccionar<br />rutina</b></li>
-          <li><span>02</span><b>Detectar<br />el cuerpo</b></li>
-          <li><span>03</span><b>Observar la<br />postura guía</b></li>
-          <li><span>04</span><b>Ejecutar el<br />movimiento</b></li>
-          <li><span>05</span><b>Mantener la<br />postura</b></li>
-          <li><span>06</span><b>Recibir<br />feedback</b></li>
-          <li><span>07</span><b>Corregir o<br />confirmar</b></li>
-          <li><span>08</span><b>Avanzar</b></li>
-          <li><span>09</span><b>Completar la<br />rutina</b></li>
+          <li><span>01</span><b>Elegir la rutina</b></li>
+          <li><span>02</span><b>Detectar el cuerpo</b></li>
+          <li><span>03</span><b>Seguir la postura guía</b></li>
+          <li><span>04</span><b>Corregir y sostener</b></li>
+          <li><span>05</span><b>Completar la serie</b></li>
         </ol>
         <div class="loop-details">
           <article>
@@ -273,7 +250,7 @@
           <p class="section-number">04</p>
           <div>
             <p class="eyebrow">Contenido implementado</p>
-            <h2 id="contenido-rutina-titulo">Tres ejemplos de validación, una lógica ampliable.</h2>
+            <h2 id="contenido-rutina-titulo">Posturas incluidas en el prototipo</h2>
           </div>
         </div>
         <figure class="routine-visual">
@@ -350,7 +327,7 @@
           <p class="section-number">05</p>
           <div>
             <p class="eyebrow">Alcance</p>
-            <h2 id="alcance-titulo">Definir el presente para construir con intención.</h2>
+            <h2 id="alcance-titulo">Alcance de la versión 0.2</h2>
           </div>
         </div>
         <div class="scope-grid">
@@ -400,7 +377,7 @@
           <p class="section-number">06</p>
           <div>
             <p class="eyebrow">Mecánicas e interacción</p>
-            <h2 id="interaccion-titulo">El movimiento activa la interfaz.</h2>
+            <h2 id="interaccion-titulo">Gestos y reconocimiento corporal</h2>
           </div>
         </div>
         <div class="interaction-intro">
@@ -424,8 +401,6 @@
               decoding="async"
               alt="Mujer realizando la postura del perro boca abajo sobre una esterilla en un espacio interior despejado e iluminado."
             />
-            <span class="context-badge">Referencia visual · cuerpo en cuadro</span>
-            <span class="tracking-frame" aria-hidden="true"><i></i></span>
           </div>
           <figcaption>
             <span class="mini-label">Contexto de uso propuesto</span>
@@ -501,10 +476,6 @@
             </tbody>
           </table>
         </div>
-        <aside class="honesty-note source-note">
-          <span aria-hidden="true">✓</span>
-          <p><b>Fuente de configuración.</b> Valores auditados directamente en <code>Menu.unity</code>, <code>Yoga.unity</code>, <code>HandMenuSelector.cs</code> y <code>YogaPoseValidator.cs</code>. Describen el build actual; los resultados de usabilidad se registran por separado.</p>
-        </aside>
       </section>
 
       <section class="visual-development-section page-section" id="desarrollo-visual" aria-labelledby="desarrollo-visual-titulo">
@@ -512,7 +483,7 @@
           <p class="section-number">07</p>
           <div>
             <p class="eyebrow">Desarrollo visual del prototipo</p>
-            <h2 id="desarrollo-visual-titulo">Del diseño del entorno a su integración en la experiencia.</h2>
+            <h2 id="desarrollo-visual-titulo">Desarrollo visual del prototipo</h2>
           </div>
         </div>
         <p class="visual-development-lead">
@@ -525,7 +496,7 @@
         <div class="visual-block">
           <div class="visual-block-copy">
             <p class="mini-label">Línea gráfica</p>
-            <h3>Bienestar y tecnología en una misma composición.</h3>
+            <h3>Dirección visual</h3>
             <p>
               La línea gráfica combina bienestar y tecnología mediante formas suaves, textos
               legibles y elementos visuales pensados para observarse a distancia. La interfaz
@@ -560,7 +531,7 @@
         <div class="visual-block">
           <div class="visual-block-copy">
             <p class="mini-label">Escenario, modelos y texturas</p>
-            <h3>Un espacio despejado para practicar sin distracciones.</h3>
+            <h3>Escenario y condiciones de uso</h3>
             <p>
               El escenario fue desarrollado como un espacio tranquilo y despejado para facilitar la
               ejecución de las posturas. Los modelos, materiales y texturas se trabajaron procurando
@@ -589,7 +560,7 @@
         <div class="visual-block">
           <div class="visual-block-copy">
             <p class="mini-label">Integración visual</p>
-            <h3>El entorno se ajusta a la cámara, la escala y la interfaz.</h3>
+            <h3>Integración en Unity</h3>
             <p>
               Los recursos visuales fueron integrados en Unity y ajustados según la posición de la
               cámara, la escala del escenario y la visibilidad de la interfaz. Esta integración permite
@@ -615,13 +586,13 @@
           <p class="section-number">08</p>
           <div>
             <p class="eyebrow">UI/UX</p>
-            <h2 id="ux-titulo">Una interfaz que se entiende desde la distancia.</h2>
+            <h2 id="ux-titulo">Interfaz para uso a distancia</h2>
           </div>
         </div>
         <div class="ux-layout">
           <div class="ux-principles">
             <p class="mini-label">Dirección de la experiencia</p>
-            <h3>Clara, cálida y orgánica.</h3>
+            <h3>Criterios visuales</h3>
             <p>
               La interfaz prioriza jerarquía visual, instrucciones breves y feedback visible. La
               tecnología acompaña la práctica sin convertirse en el centro de atención.
@@ -665,22 +636,10 @@
           </div>
           <p class="small-copy">Estos estados provienen de los mensajes y ramas activas de los scripts. “Demasiado cerca” y “demasiado lejos” no se presentan como estados porque el build no muestra esos mensajes.</p>
         </div>
-        <div class="evidence-card">
-          <div class="evidence-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 5.5h16v13H4zM8 15l2.8-3 2.3 2 1.5-1.6L18 16M8.5 9.5h.01"></path></svg>
-          </div>
-          <div>
-            <p class="mini-label">Evidencia visual</p>
-            <p>
-              Las capturas de interfaz se mantienen dentro de UI/UX para explicar el recorrido de
-              uso sin mezclarlas con el desarrollo del entorno 3D.
-            </p>
-          </div>
-        </div>
         <div class="screen-design-block">
           <div class="screen-design-copy">
             <p class="mini-label">Diseño de pantallas</p>
-            <h3>Pantallas principales del recorrido.</h3>
+            <h3>Flujo de pantallas</h3>
             <p>
               Las pantallas mantienen una estructura visual consistente durante las diferentes
               etapas de la experiencia. La información utiliza elementos claros y visibles para
@@ -703,27 +662,23 @@
           <p class="section-number">09</p>
           <div>
             <p class="eyebrow">Accesibilidad y cuidado</p>
-            <h2 id="accesibilidad-titulo">Diseñada para orientar, no para apresurar.</h2>
+            <h2 id="accesibilidad-titulo">Accesibilidad y seguridad</h2>
           </div>
         </div>
         <div class="accessibility-grid">
           <article>
-            <span class="access-icon" aria-hidden="true">Aa</span>
             <h3>Legibilidad</h3>
             <p>Textos grandes, alto contraste e instrucciones visibles desde la distancia de uso.</p>
           </article>
           <article>
-            <span class="access-icon" aria-hidden="true">◌</span>
             <h3>Estados comprensibles</h3>
             <p>Texto e iconos acompañan el color; ningún estado se comunica únicamente por color.</p>
           </article>
           <article>
-            <span class="access-icon" aria-hidden="true">Ⅱ</span>
             <h3>Ritmo controlable</h3>
             <p>Las posturas esperan al usuario y reinician el sostén al corregir. El build aún no ofrece pausa; se registra como requisito de seguridad de la siguiente iteración.</p>
           </article>
           <article>
-            <span class="access-icon" aria-hidden="true">↝</span>
             <h3>Movimiento seguro</h3>
             <p>Rutinas de baja dificultad, indicación de distancia y advertencia para detenerse ante dolor o incomodidad.</p>
           </article>
@@ -741,7 +696,7 @@
           <p class="section-number">10</p>
           <div>
             <p class="eyebrow">Sistema técnico</p>
-            <h2 id="sistema-titulo">Del movimiento a una respuesta visible.</h2>
+            <h2 id="sistema-titulo">Arquitectura del sistema</h2>
           </div>
         </div>
         <div class="architecture" aria-label="Arquitectura del sistema">
@@ -850,7 +805,7 @@
           <p class="section-number">11</p>
           <div>
             <p class="eyebrow">Datos y analítica</p>
-            <h2 id="datos-titulo">Medir para mejorar la experiencia.</h2>
+            <h2 id="datos-titulo">Datos de sesión y de prueba</h2>
           </div>
         </div>
         <div class="data-grid">
@@ -877,7 +832,6 @@
           </article>
         </div>
         <aside class="privacy-card">
-          <span aria-hidden="true">⌁</span>
           <p>
             <b>Privacidad.</b> El prototipo procesa información corporal para detectar posiciones y
             movimientos en tiempo real. El build revisado no implementa almacenamiento persistente
@@ -892,7 +846,7 @@
           <p class="section-number">12</p>
           <div>
             <p class="eyebrow">Público y personas</p>
-            <h2 id="personas-titulo">Autonomía para quienes empiezan.</h2>
+            <h2 id="personas-titulo">Usuarios previstos</h2>
           </div>
         </div>
         <div class="audience-callout">
@@ -927,7 +881,7 @@
         <div class="persona-grid">
           <article class="persona-card">
             <div class="persona-top"><span>BP 01</span><p>Joven universitaria</p></div>
-            <h3>Busca una pausa activa sin sentirse observada.</h3>
+            <h3>Principiante que busca una rutina breve</h3>
             <dl>
               <div><dt>Edad / ocupación</dt><dd>Adulta joven · estudiante universitaria</dd></div>
               <div><dt>Objetivo</dt><dd>Iniciar una práctica de yoga breve y comprensible.</dd></div>
@@ -939,7 +893,7 @@
           </article>
           <article class="persona-card">
             <div class="persona-top"><span>BP 02</span><p>Adulto joven tecnológico</p></div>
-            <h3>Valora una experiencia autónoma y directa.</h3>
+            <h3>Usuario habituado a interfaces digitales</h3>
             <dl>
               <div><dt>Edad / ocupación</dt><dd>Adulto joven · usuario frecuente de tecnología</dd></div>
               <div><dt>Objetivo</dt><dd>Realizar una rutina corta en horarios flexibles.</dd></div>
@@ -962,7 +916,7 @@
           <p class="section-number">13</p>
           <div>
             <p class="eyebrow">Referentes funcionales</p>
-            <h2 id="referentes-titulo">Aprender de formatos conocidos, con una respuesta corporal.</h2>
+            <h2 id="referentes-titulo">Referentes y diferencias funcionales</h2>
           </div>
         </div>
         <div class="comparison-table-wrap">
@@ -1003,7 +957,7 @@
           <p class="section-number">14</p>
           <div>
             <p class="eyebrow">Riesgos, límites y proyección</p>
-            <h2 id="proyeccion-titulo">Lo que falta también queda documentado.</h2>
+            <h2 id="proyeccion-titulo">Límites y próximos pasos</h2>
           </div>
         </div>
         <div class="limits-grid">
@@ -1054,7 +1008,7 @@
           <p class="section-number">15</p>
           <div>
             <p class="eyebrow">Plan de pruebas</p>
-            <h2 id="pruebas-titulo">Comprobar con criterios concretos.</h2>
+            <h2 id="pruebas-titulo">Plan y criterios de prueba</h2>
           </div>
         </div>
         <div class="testing-overview">
@@ -1136,12 +1090,9 @@
 
     <footer class="footer">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32"><circle cx="16" cy="6.5" r="3.4"></circle><path d="M16 11.5v8.2M8.5 16l7.5 3.7 7.5-3.7M11.4 27l4.6-7.3L20.6 27"></path></svg>
-        </span>
         <span>Kinect Yoga Experience</span>
       </div>
-      <p>Interactive Design Document · v0.2 · Revisión documental 20 de julio de 2026</p>
+      <p>Documento de diseño interactivo · v0.2 · Revisión 20 de julio de 2026</p>
     </footer>
   </body>
 </html>
